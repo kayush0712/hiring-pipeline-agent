@@ -48,7 +48,7 @@ def extract_text_from_pdf(pdf_path):
 def score_resume(text):
 
     prompt = f"""
-You are a hiring assistant for SaarthiOS, an AI startup.
+You are a hiring assistant for Company, an AI startup.
 
 Your task is to evaluate candidates realistically and critically.
 
@@ -215,19 +215,19 @@ def read_emails():
   
 def send_ack_email(to_email):
 
-    subject = "Application Received - SaarthiOS"
+    subject = "Application Received - Company"
 
     body = """
 Hi,
 
-Thank you for applying to SaarthiOS.
+Thank you for applying to Company.
 
 We have successfully received your application and our team is reviewing it.
 
 We’ll reach out if your profile matches our requirements.
 
 Best,
-SaarthiOS Hiring Team
+Company Hiring Team
 """
 
     msg = MIMEText(body)
@@ -253,10 +253,10 @@ SaarthiOS Hiring Team
 
 def send_recruiter_email(candidate_email, ai_scores, resume_url):
 
-    subject = "New High Quality Candidate - SaarthiOS"
+    subject = "New High Quality Candidate - Company"
 
     body = f"""
-New candidate detected by SaarthiOS Hiring Agent.
+New candidate detected by Company Hiring Agent.
 
 Candidate Email:
 {candidate_email}
